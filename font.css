@@ -1,0 +1,11 @@
+@font-face {
+    font-family: General-Sans;
+    src: url("./assets/fonts/GeneralSans-Regular.otf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: General-Sans;
+    src: url("./assets/fonts/GeneralSans-Medium.otf");
+    font-weight: 700;
+}
