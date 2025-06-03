@@ -6,23 +6,38 @@
     box-sizing: border-box;
     font-family: General-Sans;
 }
-html , body {
+
+html,
+body {
     width: 100%;
     height: 100%;
 }
 
-#main{
+#main {
     width: 100%;
     color: #fff;
+    position: relative;
     background-color: #000;
 }
 
-#hero{
-    width: 100%;
-    height: 100vh;
+.cursor{
+    width: 25px;
+    height: 25px;
+    z-index: 999;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.2s linear;
+    pointer-events: none;
 }
 
-nav{
+#hero {
+    width: 100%;
+    /* height: 100vh; */
+    position: relative;
+}
+
+nav {
     width: 100%;
     display: flex;
     align-items: center;
@@ -32,12 +47,12 @@ nav{
     font-weight: 700;
 }
 
-nav a{
+nav a {
     color: #fff;
     text-decoration: none;
 }
 
-h1{
+h1 {
     width: 100%;
     font-size: 10vw;
     display: flex;
@@ -46,16 +61,16 @@ h1{
     opacity: 0.6;
 }
 
-#line2{
+#line2 {
     margin-left: 10vw;
 }
 
-.heading{
+.heading {
     padding: 3vw;
     width: fit-content;
 }
 
-.subhead{
+.subhead {
     text-transform: uppercase;
     font-size: 1.2vw;
     font-weight: 700;
@@ -63,49 +78,173 @@ h1{
     text-align: right;
 }
 
-p.available{
+p.available {
     margin-top: 8dvh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     font-size: 1.2vw;
-    padding: 3vw;
+    padding: .5vw 3vw;
     font-weight: 700;
 }
 
-.available span{
+.available span {
     text-transform: uppercase;
 }
 
-#hero-footer{
+#hero-footer {
+    position: relative;
+    bottom: 0;
     font-size: 1.2vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3vw;
+    padding: .5vw 3vw;
 }
 
-#hero-footer a{
+#hero-footer a {
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
 }
 
-#page2{
+
+.db{
+    display: block;
+}
+
+.iconset i {
+    display: flex;
+    width: 2vw;
+    height: 2vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #000;
+}
+
+.iconset{
+    display: flex;
+    gap: 1vw;
+}
+#page2 {
     padding: 3vw;
     padding-top: 12vw;
     width: 100%;
-    height: 200vh;
+    height: 250vh;
 }
 
-#page2 :nth-child(5){
+#page2 :nth-child(5) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.600);
 }
 
-#page2 .elem{
-    width: 80%;
+#page2 .elem {
+    width: 92%;
     height: auto;
-    font-size: 10vw;
+    padding: 4vw 0;
+    font-size: 6.5vw;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-top: 1px solid rgba(255, 255, 255, 0.600);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+
+.elem .year{
+    font-size: 1.2vw;
+    color: white;
+}
+
+.elem img{
+    position: absolute;
+    height: 140%;
+    border-radius: 20px;
+}
+
+#page2 a,#about a{
+    display: inline-block;
+    margin: 5vw 0;
+    font-size: 1.2vw;
+    text-decoration: none;
+    padding: .4vw 1.6vw;
+    border: 1px solid white;
+    border-radius: 80px;
+    color: white;
+    z-index: 9;
+}
+
+a sup{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    gap: 7vw;
+    justify-content:end;
+    padding: 10vw;
+}
+
+#about img{
+    width: 20%;
+}
+
+#about .about{
+    width: 45%;
+    font-size: 1.4vw;
+    line-height: 2.1vw;
+}
+
+#about a {
+    margin: 2vw 0;
+}
+
+.head{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1vw;
+    text-transform: uppercase;
+}
+
+#youtube{
+    padding: 6vw 3vw;
+}
+
+#youtube a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2vw;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+footer{
+    width: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw;
+}
+
+.urls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
 }

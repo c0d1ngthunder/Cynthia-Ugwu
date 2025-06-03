@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cynthia Ugwu • Product Designer</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="main">
+      <div class="cursor"></div>
       <nav>
         <a href="/">Cynthia Ugwu</a>
         <span>MENU+</span>
@@ -26,18 +31,84 @@
           <span>work from Sep ‘24</span>
         </p>
         <div id="hero-footer">
-          <a href="#"><span>Previously Worked at Code and Theory</span><i class="ri-arrow-right-up-line"></i></a>
-          <a href="#">Protopie Ambassador</a>
-          <span><i class="ri-arrow-down-line"></i><i class="ri-arrow-down-line"></i></span>
+          <a href="#"
+            ><span>Previously Worked at</span
+            ><i class="ri-arrow-right-up-line"></i
+            ><span class="db">Code and Theory</span></a
+          >
+          <a href="#"><span>Protopie Ambassador</span></a>
+          <span class="iconset"
+            ><i class="ri-arrow-down-line"></i><i class="ri-arrow-down-line"></i
+          ></span>
         </div>
       </div>
       <div id="page2">
-        <div class="elem">lorem</div>
-        <div class="elem">lorem</div>
-        <div class="elem">lorem</div>
-        <div class="elem">lorem</div>
-        <div class="elem">lorem</div>
+        <div class="elem">
+          <span class="elemhead">lucid Motors</span>
+          <img src="./assets/images/lucid-motors.webp" alt="" />
+          <span class="year">2023</span>
+        </div>
+        <div class="elem">
+          <span class="elemhead">Baron Capital</span>
+          <img src="./assets/images/baron-capital.webp" alt="" /><span
+            class="year"
+            >2023</span
+          >
+        </div>
+        <div class="elem">
+          <span class="elemhead">NFL</span>
+          <img src="./assets/images/nfl.webp" alt="" /><span class="year"
+            >2024</span
+          >
+        </div>
+        <div class="elem">
+          <span class="elemhead">Placenew</span
+          ><img src="./assets/images/placenew.webp" alt="" /><span class="year"
+            >2024</span
+          >
+        </div>
+        <div class="elem">
+          <span class="elemhead">somos</span
+          ><img src="./assets/images/somos.webp" alt="" /><span class="year"
+            >2023</span
+          >
+        </div>
+        <a href="#">View all work <sup>8</sup></a>
       </div>
+      <div id="about">
+        <img src="./assets/images/cynthia.webp" alt="" />
+        <div class="about">
+          <div class="head">(About me)</div>
+          <div class="text">
+            I'm a product and motion designer who loves creating things that are
+            not just eye candy but also fix life's little hiccups. When I'm not
+            glued to my computer like a robot or scribbling on my iPad, you
+            might catch me leveling up in video games, snapping photos like a
+            wannabe pro, or watching football because football is life. My
+            design philosophy? Keep it snazzy, make it work, and sprinkle in a
+            bit of fun. I'm the designer you want on your team if you want
+            people to exclaim, "I need that in my life!".
+          </div>
+          <a href="#">Let's talk</a>
+        </div>
+      </div>
+      <div id="youtube">
+        <div class="head">Oops, almost forgot…</div>
+        <a href="#">Subscribe to my youtube channel</a>
+      </div>
+      <footer>
+        <section>
+          <div>© 2025</div>
+          <div></div>
+        </section>
+        <section class="urls">
+          <a href="">Linkedin</a><a href="">X/twitter</a><a href="">Instagram</a
+          ><a href="">youtube</a>
+        </section>
+      </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
