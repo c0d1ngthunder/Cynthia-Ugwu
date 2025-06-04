@@ -27,6 +27,7 @@ body {
     width: 15px;
     height: 15px;
     z-index: 999;
+    font-weight: 700;
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
@@ -262,4 +263,24 @@ footer {
 footer a {
     text-decoration: none;
     color: #fff;
+}
+
+
+/* ---------------------------------------Micro Interactions--------------------------------------- */
+.youtube{
+    display: inline-block;
+    width: fit-content;
+}
+
+.link{
+    position: relative;
+    overflow: hidden;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    display: inline-block;
+    transform: translate(-100%,0);
 }

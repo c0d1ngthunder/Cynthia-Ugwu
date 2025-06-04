@@ -44,8 +44,9 @@ function page2animations() {
       cursor.innerHTML = `VIEW`;
 
       gsap.to(cursor, {
-        width: "50px",
-        height: "50px",
+        width: "80px",
+        height: "80px",
+        opacity: 0.8,
         duration: 0.1,
         ease: Power3,
       });
@@ -89,6 +90,7 @@ function page2animations() {
       gsap.to(cursor, {
         width: "15px",
         height: "15px",
+        opacity: 1,
         duration: 0.1,
         ease: Power3,
       });
@@ -120,12 +122,62 @@ function getTime() {
   const nowET = new Date().toLocaleString("en-US", options);
   document.querySelector(".time").innerHTML = nowET + " ET";
 }
+function hovereffect() {
+  document.querySelectorAll(".link").forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+      gsap.to(link.querySelector(".line"), {
+        x: 0,
+        duration: 0.2,
+        ease: Power3,
+      });
+    });
+    link.addEventListener("mouseleave", () => {
+      gsap.to(link.querySelector(".line"), {
+        x: "100%",
+        duration: 0.2,
+        ease: Power3,
+        onComplete: () => {
+          gsap.set(link.querySelector(".line"), { x: "-100%" });
+        },
+      });
+    });
+  });
+  document.querySelectorAll(".btn").forEach((btn) => {
+    btn.addEventListener("mouseenter", () => {
+      gsap.to(btn, {
+        color: "black",
+        backgroundColor: "white",
+        duration: 0.2,
+        ease: Power3,
+      });
+      gsap.to(btn.querySelector("sup"), {
+        color: "black",
+        duration: 0.2,
+        ease: Power3,
+      });
+    });
+    btn.addEventListener("mouseleave", () => {
+      gsap.to(btn, {
+        color: "white",
+        backgroundColor: "black",
+        duration: 0.2,
+        ease: Power3,
+      });
+      gsap.to(btn.querySelector("sup"), {
+        color: "rgba(255, 255, 255,0.6)",
+        duration: 0.2,
+        ease: Power3,
+      });
+    });
+  });
+}
 
 const locoscroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
   smooth: true,
 });
 
-getTime()
+hovereffect();
+getTime();
 page2animations();
 customcursorWithSkew();
