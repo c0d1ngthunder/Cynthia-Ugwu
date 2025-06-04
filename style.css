@@ -20,16 +20,21 @@ body {
     background-color: #000;
 }
 
-.cursor{
-    width: 25px;
-    height: 25px;
+.cursor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
     z-index: 999;
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
     pointer-events: none;
+    color: #000;
 }
+
 
 #hero {
     width: 100%;
@@ -110,7 +115,7 @@ p.available {
 }
 
 
-.db{
+.db {
     display: block;
 }
 
@@ -126,10 +131,11 @@ p.available {
     color: #000;
 }
 
-.iconset{
+.iconset {
     display: flex;
     gap: 1vw;
 }
+
 #page2 {
     padding: 3vw;
     padding-top: 12vw;
@@ -156,18 +162,22 @@ p.available {
     position: relative;
 }
 
-.elem .year{
+.elem .year {
     font-size: 1.2vw;
     color: white;
 }
 
-.elem img{
+.elem img {
     position: absolute;
     height: 140%;
     border-radius: 20px;
+    opacity: 0;
+    z-index: 9;
+    pointer-events: none;
 }
 
-#page2 a,#about a{
+#page2 a,
+#about a {
     display: inline-block;
     margin: 5vw 0;
     font-size: 1.2vw;
@@ -179,25 +189,25 @@ p.available {
     z-index: 9;
 }
 
-a sup{
+a sup {
     color: rgba(255, 255, 255, 0.6);
 }
 
-#about{
+#about {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: start;
     gap: 7vw;
-    justify-content:end;
+    justify-content: end;
     padding: 10vw;
 }
 
-#about img{
+#about img {
     width: 20%;
 }
 
-#about .about{
+#about .about {
     width: 45%;
     font-size: 1.4vw;
     line-height: 2.1vw;
@@ -207,17 +217,17 @@ a sup{
     margin: 2vw 0;
 }
 
-.head{
+.head {
     color: rgba(255, 255, 255, 0.6);
     font-size: 1vw;
     text-transform: uppercase;
 }
 
-#youtube{
+#youtube {
     padding: 6vw 3vw;
 }
 
-#youtube a{
+#youtube a {
     text-decoration: none;
     color: #fff;
     font-size: 1.2vw;
@@ -225,7 +235,7 @@ a sup{
     text-transform: uppercase;
 }
 
-footer{
+footer {
     width: 100%;
     text-transform: uppercase;
     text-decoration: none;
@@ -237,7 +247,7 @@ footer{
     padding: 3vw;
 }
 
-.urls{
+.urls {
     display: flex;
     align-items: center;
     justify-content: space-between;
