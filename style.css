@@ -247,6 +247,11 @@ footer {
     padding: 3vw;
 }
 
+.copyright{
+    display: flex;
+    gap: 20px;
+}
+
 .urls {
     display: flex;
     align-items: center;
