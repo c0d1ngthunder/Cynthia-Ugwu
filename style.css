@@ -26,7 +26,7 @@ body {
     justify-content: center;
     width: 15px;
     height: 15px;
-    z-index: 999;
+    z-index: 99;
     font-weight: 700;
     border-radius: 50%;
     background-color: #fff;
@@ -39,7 +39,7 @@ body {
 
 #hero {
     width: 100%;
-    /* height: 100vh; */
+    height: 100vh;
     position: relative;
 }
 
@@ -84,8 +84,8 @@ h1 {
     text-align: right;
 }
 
-p.available {
-    margin-top: 8dvh;
+.available {
+    margin-top: 15vh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -96,11 +96,13 @@ p.available {
 
 .available span {
     text-transform: uppercase;
+    display: inline-block;
 }
 
 #hero-footer {
-    position: relative;
-    bottom: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 12%;
     font-size: 1.2vw;
     display: flex;
     align-items: center;
@@ -139,9 +141,8 @@ p.available {
 
 #page2 {
     padding: 3vw;
-    padding-top: 12vw;
     width: 100%;
-    height: 250vh;
+    height: 200vh;
 }
 
 #page2 :nth-child(5) {
@@ -187,7 +188,9 @@ p.available {
     border: 1px solid white;
     border-radius: 80px;
     color: white;
-    z-index: 9;
+    position: relative;
+    z-index: 999;
+    mix-blend-mode: difference;
 }
 
 a sup {
@@ -196,12 +199,12 @@ a sup {
 
 #about {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 7vw;
     justify-content: end;
-    padding: 10vw;
+    padding: 10vh;
 }
 
 #about img {
@@ -265,8 +268,17 @@ footer a {
     color: #fff;
 }
 
+.footer-container{
+    height: 10vh;
+}
+
 
 /* ---------------------------------------Micro Interactions--------------------------------------- */
+
+a{
+    outline: none;
+}
+
 .youtube{
     display: inline-block;
     width: fit-content;
@@ -277,10 +289,58 @@ footer a {
     overflow: hidden;
 }
 
+.link i{
+    font-weight: 300;
+    font-size: 1.8vw;
+    display: inline-block;
+    transform: rotate(20deg);
+}
+
 .line{
     width: 100%;
     height: 1px;
     background-color: #fff;
-    display: inline-block;
+    display: block;
     transform: translate(-100%,0);
+}
+
+/* --------------------------------------Loader--------------------------------------- */
+
+#loader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(170,170,170);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8vw;
+    gap: 1vw;
+    z-index: 9999;
+}
+
+#loader .loading{
+    width: 8vw;
+    height: 1px;
+    background-color: rgba(256, 256, 256,0.6);
+    overflow: hidden;
+}
+
+.loaded{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transform: translate(-100%,0);
+}
+
+.content-anim{
+    display: block;
+}
+
+.wrapper{
+    overflow: hidden;
+}
+
+.inbl{
+    width: fit-content;
 }

@@ -5,6 +5,10 @@ function customcursorWithSkew() {
   var xprev = 0;
   var yprev = 0;
 
+  function makenegative(x) {
+    return x > 0 ? -x : x;
+  }
+
   window.addEventListener("mousemove", (dets) => {
     clearTimeout(timeout);
 
@@ -15,8 +19,8 @@ function customcursorWithSkew() {
     var dy = dets.clientY - yprev;
 
     // Clamp values to avoid extreme scaling
-    xscale = gsap.utils.clamp(0.8, 1.2, 1 + dx * 0.05);
-    yscale = gsap.utils.clamp(0.8, 1.2, 1 + dy * 0.05);
+    xscale = gsap.utils.clamp(0.8, 1.4, 1 + makenegative(dx) * 0.05);
+    yscale = gsap.utils.clamp(0.8, 1.4, 1 + makenegative(dy) * 0.05);
 
     // Apply transform
     document.querySelector(".cursor").style.transform = `translate(${
@@ -122,6 +126,7 @@ function getTime() {
   const nowET = new Date().toLocaleString("en-US", options);
   document.querySelector(".time").innerHTML = nowET + " ET";
 }
+
 function hovereffect() {
   document.querySelectorAll(".link").forEach((link) => {
     link.addEventListener("mouseenter", () => {
@@ -130,6 +135,16 @@ function hovereffect() {
         duration: 0.2,
         ease: Power3,
       });
+      if (
+        !(link.parentElement.classList.contains("urls") &&
+        link.parentElement == "nav")
+      ) {
+        gsap.to(link.querySelector("i"), {
+          transform: "rotate(42deg)",
+          duration: 0.2,
+          ease: Power3,
+        });
+      }
     });
     link.addEventListener("mouseleave", () => {
       gsap.to(link.querySelector(".line"), {
@@ -140,6 +155,16 @@ function hovereffect() {
           gsap.set(link.querySelector(".line"), { x: "-100%" });
         },
       });
+      if (
+        !(link.parentElement.classList.contains("urls") &&
+        link.parentElement == "nav")
+      ) {
+        gsap.to(link.querySelector("i"), {
+          transform: "rotate(20deg)",
+          duration: 0.2,
+          ease: Power3,
+        });
+      }
     });
   });
   document.querySelectorAll(".btn").forEach((btn) => {
@@ -150,11 +175,13 @@ function hovereffect() {
         duration: 0.2,
         ease: Power3,
       });
-      gsap.to(btn.querySelector("sup"), {
-        color: "black",
-        duration: 0.2,
-        ease: Power3,
-      });
+      if (btn.parentElement.id == "page2") {
+        gsap.to(btn.querySelector("sup"), {
+          color: "black",
+          duration: 0.2,
+          ease: Power3,
+        });
+      }
     });
     btn.addEventListener("mouseleave", () => {
       gsap.to(btn, {
@@ -163,11 +190,63 @@ function hovereffect() {
         duration: 0.2,
         ease: Power3,
       });
-      gsap.to(btn.querySelector("sup"), {
-        color: "rgba(255, 255, 255,0.6)",
-        duration: 0.2,
-        ease: Power3,
-      });
+      if (btn.parentElement.id === "page2") {
+        gsap.to(btn.querySelector("sup"), {
+          color: "rgba(255, 255, 255,0.6)",
+          duration: 0.2,
+          ease: Power3,
+        });
+      }
+    });
+  });
+}
+
+function loadingAnimation() {
+  window.addEventListener("load", () => {
+    let tl = gsap.timeline();
+    tl.to(".loading .loaded", {
+      transform: "translate(0,0)",
+      duration: 0.4,
+      ease: Power3,
+    });
+    document.querySelector(".percent").innerHTML = `100%`;
+    tl.to("#loader", {
+      transform: "translate(0,-100%)",
+      duration: 0.7,
+      ease: Linear,
+      onComplete: () => {
+        gsap.set("#loader", { display: "none" });
+      },
+    });
+    tl.from(".content-anim", {
+      y: "100%",
+      duration: 0.5,
+      ease: Power3,
+    });
+    tl.from(".subhead", {
+      y: "-100%",
+      duration: 0.5,
+      delay: -0.2,
+      ease: Power3,
+    });
+    tl.from(".navtext", {
+      y: 30,
+      opacity: 0,
+      duration: 0.5,
+      ease: Power3,
+      delay: -0.2,
+    });
+    tl.from(".avail", {
+      y: "-100%",
+      duration: 0.5,
+      delay: -0.2,
+      ease: Power3,
+    });
+    tl.from("#hero-footer", {
+      opacity: 0,
+      y: "-10%",
+      duration: 0.5,
+      ease: Power3,
     });
   });
 }
@@ -177,6 +256,7 @@ const locoscroll = new LocomotiveScroll({
   smooth: true,
 });
 
+loadingAnimation();
 hovereffect();
 getTime();
 page2animations();

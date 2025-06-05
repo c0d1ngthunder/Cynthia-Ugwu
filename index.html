@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cynthia Ugwu • Product Designer</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
@@ -15,37 +16,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="loader">
+      <div>Cynthia Ugwu</div>
+      <div class="loading"><div class="loaded"></div></div>
+      <div class="percent">0%</div>
+    </div>
     <div id="main">
       <div class="cursor"></div>
       <nav>
-        <span>Cynthia Ugwu</span>
-        <span>MENU+</span>
+        <span class="navtext">Cynthia Ugwu</span>
+        <span class="link navtext">MENU+ <span class="line"></span></span>
       </nav>
       <div id="hero">
         <section class="heading">
-          <h1><span>PRODUCT</span><span id="line2">DESIGNER</span></h1>
-          <span class="subhead">Based in Toronto</span>
+          <h1>
+            <div class="wrapper">
+              <span class="content-anim">PRODUCT</span>
+            </div>
+            <div class="wrapper">
+              <span id="line2" class="content-anim">DESIGNER</span>
+            </div>
+          </h1>
+          <div class="wrapper"><span class="subhead">Based in Toronto</span></div>
         </section>
-        <p class="available">
-          <span>Available for Full Time & Freelance</span>
-          <span>work from Sep ‘24</span>
-        </p>
-        <div id="hero-footer">
-          <a href="#"
-          class="link"
-            ><span>Previously Worked at</span
-            ><i class="ri-arrow-right-up-line"></i
-            ><span class="db">Code and Theory</span><span class="line"></span
-          ></a>
-          <a href="#"
-          class="link"
-            ><span
-              >Protopie Ambassador<i class="ri-arrow-right-up-line"></i></span
-            ><span class="line"></span
-          ></a>
-          <span class="iconset"
-            ><i class="ri-arrow-down-line"></i><i class="ri-arrow-down-line"></i
-          ></span>
+        <div class="available">
+          <div class="wrapper inbl"><span class="avail">Available for Full Time & Freelance</span></div>
+          <div class="wrapper inbl"><span class="avail">work from Sep ‘24</span></div>
+        </div>
+        <div class="footer-container">
+          <div id="hero-footer">
+            <a href="#" class="link"
+              ><span>Previously Worked at</span
+              ><i class="ri-arrow-right-up-line"></i
+              ><span class="db">Code and Theory</span><span class="line"></span
+            ></a>
+            <a href="#" class="link"
+              ><span
+                >Protopie Ambassador<i class="ri-arrow-right-up-line"></i></span
+              ><span class="line"></span
+            ></a>
+            <span class="iconset"
+              ><i class="ri-arrow-down-line"></i
+              ><i class="ri-arrow-down-line"></i
+            ></span>
+          </div>
         </div>
       </div>
       <div id="page2">
@@ -112,7 +126,8 @@
         </section>
         <section class="urls">
           <a class="link" href="">Linkedin<span class="line"></span></a
-          ><a class="link" href="">X/twitter <span class="line"></span></a><a class="link" href="">Instagram <span class="line"></span></a
+          ><a class="link" href="">X/twitter <span class="line"></span></a
+          ><a class="link" href="">Instagram <span class="line"></span></a
           ><a class="link" href="">youtube <span class="line"></span></a>
         </section>
       </footer>
