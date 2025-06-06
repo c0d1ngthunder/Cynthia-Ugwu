@@ -1,0 +1,171 @@
+@media only screen and (max-width:1000px) {
+    .heading h1 {
+        font-size: 13vw;
+        line-height: 12vw;
+    }
+
+    #hero,
+    nav {
+        font-size: 1.6vw;
+    }
+
+    .elemhead {
+        font-size: 9vw;
+    }
+
+    .elem .year,
+    .btn {
+        font-size: 3vw;
+    }
+
+    #about .head {
+        font-size: 2vw;
+    }
+
+    #about .text {
+        font-size: 2vw;
+        line-height: 2.8vw;
+    }
+
+    #about a {
+        padding: 2vw;
+    }
+
+    .urls {
+        width: 50%;
+    }
+    
+    #youtube .youtube {
+        font-size: 2vw;
+    }
+
+    #youtube .head {
+        font-size: 1.8vw;
+    }
+}
+
+@media only screen and (max-width:750px) {
+
+    #youtube .youtube {
+        font-size: 3vw;
+    }
+
+    #youtube .head {
+        font-size: 2.8vw;
+    }
+
+    footer {
+        font-size: 1.8vw;
+    }
+
+    .heading h1 {
+        font-size: 10vw;
+        line-height: 8.2vw;
+    }
+
+    #hero,
+    nav,
+    i {
+        font-size: 2.1vw;
+    }
+
+    nav {
+        padding: 5vw 3vw;
+    }
+
+    .iconset i {
+        padding: 2vw;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .elemhead {
+        font-size: 10vw;
+    }
+
+    #page2 {
+        height: 150vh;
+    }
+
+    .about {
+        width: 60%;
+    }
+
+    .iconset {
+        display: none;
+    }
+
+    #hero-footer {
+        transform: translate(0, -30%);
+    }
+
+    #hero i {
+        font-size: 2vw;
+    }
+
+    #about .text {
+        line-height: 3vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        font-size: 2vw;
+    }
+
+    .heading h1 {
+        font-size: 15vw;
+        line-height: 13vw;
+    }
+
+    #page2 {
+        height: 100vh;
+    }
+
+    #main {
+        padding: 3vw;
+    }
+
+    nav {
+        font-size: 4vw;
+    }
+
+    #hero {
+        font-size: 3vw;
+    }
+
+    .subhead {
+        padding-top: 2vw;
+    }
+
+    .elemhead {
+        font-size: 8vw;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    #about img {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #page2 .elem {
+        padding: 7vw 0;
+    }
+    #about .head{
+        font-size: 3vw;
+    }
+    #about .text {
+        font-size: 3.4vw;
+        line-height: 4.4vw;
+    }
+}
