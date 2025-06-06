@@ -136,8 +136,8 @@ function hovereffect() {
         ease: Power3,
       });
       if (
-        !(link.parentElement.classList.contains("urls") &&
-        link.parentElement == "nav")
+        (link.parentElement.id=="hero-footer" ||
+        link.classList.contains("youtube"))
       ) {
         gsap.to(link.querySelector("i"), {
           transform: "rotate(42deg)",
@@ -156,8 +156,8 @@ function hovereffect() {
         },
       });
       if (
-        !(link.parentElement.classList.contains("urls") &&
-        link.parentElement == "nav")
+        (link.parentElement.id=="hero-footer" ||
+        link.classList.contains("youtube"))
       ) {
         gsap.to(link.querySelector("i"), {
           transform: "rotate(20deg)",
